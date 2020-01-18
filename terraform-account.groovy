@@ -1,5 +1,4 @@
 #!/usr/bin/env groovy
-@Library('ananth@ticket') _
 // CHOICE/BOOLEAN PARAMETERS i.e. there's always a value
 terraformType = params.TERRAFORM_TYPE
 terraformVersion = params.TERRAFORM_VERSION
