@@ -39,12 +39,12 @@ String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() 
             sh 'ls -lrth'
         }
 
-//        stage("Clone Repository") {
-//            gitlab.clone("${sRepoName}", [
-//             branch: "${sRepoBranch}",
-//              repository_group_path: "${sRepoPart}"
-//            ])
-//        }
+        stage("Clone Repository") {
+            git.clone("${sRepoName}", [
+             branch: "${sRepoBranch}",
+              repository_group_path: "${sRepoPart}"
+            ])
+        }
 
         dir("$sRepoName") {
 
