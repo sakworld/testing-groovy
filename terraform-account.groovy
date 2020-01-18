@@ -10,10 +10,10 @@ varsPath = !params.VARS_PATH ? "vars/vars.tfvars" : params.VARS_PATH
 backendPath = !params.BACKEND_PATH ? "vars/backend.hcl" : params.BACKEND_PATH
 
 // REQUIRED AND CONDITIONAL PARAMETERS i.e. could be accidentally empty
-// if (!params.REPO_ABS_PATH) {
-//   error("You must specify the absolute path to the repository!")
-// }
-sRepositoryAbsolutePath = aws-terraform/main.tf
+if (!params.REPO_ABS_PATH) {
+  error("You must specify the absolute path to the repository!")
+}
+sRepositoryAbsolutePath = params.REPO_ABS_PATH
 
 // GENERATED VARIABLES
 String sRepoName = sRepositoryAbsolutePath.split("/")[-1]
