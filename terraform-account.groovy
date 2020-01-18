@@ -74,7 +74,7 @@ String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() 
                   terraform_version = this.terraformVersion
                   vars_path = this.varsPath
                   backend_config = this.backendPath
-                  terraform_path = "/var/jenkins_home/aws-terraform/"
+                  terraform_path = "/var/jenkins_home/tools/"
 
                 } // end terraform.call
 
