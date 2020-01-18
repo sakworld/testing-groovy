@@ -88,7 +88,7 @@ String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() 
 
       } catch (e) {
 
-        slack.send "@here Failure detected: ${e}", null, "red"
+ //       slack.send "@here Failure detected: ${e}", null, "red"
 
         throw e
 
