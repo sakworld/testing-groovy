@@ -35,7 +35,7 @@ String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() 
 
         cleanWs() // Clean at start in case of resumption
 
-        stage("Clone Repository") {
+//        stage("Clone Repository") {
 //            gitlab.clone("${sRepoName}", [
 //             branch: "${sRepoBranch}",
 //              repository_group_path: "${sRepoPart}"
