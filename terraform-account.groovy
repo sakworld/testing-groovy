@@ -19,7 +19,7 @@ sRepositoryAbsolutePath = params.REPO_ABS_PATH
 String sRepoName = sRepositoryAbsolutePath.split("/")[-1]
 String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() - sRepositoryAbsolutePath.reverse().indexOf('/') - 2)]
 
-ansiColor("xterm") {
+//ansiColor("xterm") {
 
     node("$nodeName") {
 
@@ -96,4 +96,4 @@ ansiColor("xterm") {
 
     } // end node
 
-} // end xterm
+//} // end xterm
