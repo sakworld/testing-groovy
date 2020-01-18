@@ -34,6 +34,10 @@ String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() 
       try {
 
         cleanWs() // Clean at start in case of resumption
+        
+        stage("Location") {
+            sh 'PWD'
+        }
 
 //        stage("Clone Repository") {
 //            gitlab.clone("${sRepoName}", [
