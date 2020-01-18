@@ -39,12 +39,19 @@ String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() 
             sh 'ls -lrth'
         }
 
-        stage("Clone Repository") {
-            git.clone("${sRepoName}", [
-             branch: "${sRepoBranch}",
-              repository_group_path: "${sRepoPart}"
-            ])
+       stage('Checkout proj') {
+            git branch: 'master',
+                credentialsId: 'ananth_test',
+                url: 'https://github.com/sakworld/testing-groovy.git'
+            sh "ls -lat"
         }
+
+//        stage("Clone Repository") {
+//            git.clone("${sRepoName}", [
+//             branch: "${sRepoBranch}",
+//              repository_group_path: "${sRepoPart}"
+//            ])
+//        }
 
         dir("$sRepoName") {
 
