@@ -31,11 +31,11 @@ String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() 
       currentBuild.displayName = "#${env.BUILD_ID} ${sRepoName}"
       currentBuild.description = "Triggered by: ${build_user_id}"
 
-//      try {
+      try {
 
-//        cleanWs() // Clean at start in case of resumption
+        cleanWs() // Clean at start in case of resumption
 
-//        stage("Clone Repository") {
+        stage("Clone Repository") {
 //            gitlab.clone("${sRepoName}", [
 //             branch: "${sRepoBranch}",
 //              repository_group_path: "${sRepoPart}"
