@@ -36,7 +36,7 @@ String sRepoPart = sRepositoryAbsolutePath[0..(sRepositoryAbsolutePath.length() 
         cleanWs() // Clean at start in case of resumption
         
         stage("Location") {
-            sh 'PWD'
+            sh 'ls -lrth'
         }
 
 //        stage("Clone Repository") {
