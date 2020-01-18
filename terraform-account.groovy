@@ -13,7 +13,7 @@ backendPath = !params.BACKEND_PATH ? "vars/backend.hcl" : params.BACKEND_PATH
 if (!params.REPO_ABS_PATH) {
   error("You must specify the absolute path to the repository!")
 }
-sRepositoryAbsolutePath = params.REPO_ABS_PATH
+sRepositoryAbsolutePath = aws-terraform/main.tf
 
 // GENERATED VARIABLES
 String sRepoName = sRepositoryAbsolutePath.split("/")[-1]
